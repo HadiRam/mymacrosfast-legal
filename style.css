@@ -1,0 +1,143 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5f6368;
+  --accent: #007aff;
+  --border: #e5e5e5;
+  --card: #f7f8fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a;
+    --text: #eaeaea;
+    --muted: #9aa0a6;
+    --accent: #4da3ff;
+    --border: #2a2d33;
+    --card: #1c1f24;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+header.page {
+  margin-bottom: 40px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+h1 {
+  font-size: 28px;
+  margin: 24px 0 4px;
+}
+
+h2 {
+  font-size: 19px;
+  margin: 36px 0 8px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+.callout {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.legal {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.card-links {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.card-link {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card);
+}
+
+.card-link strong {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.card-link span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
