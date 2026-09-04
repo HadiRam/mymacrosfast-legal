@@ -20,7 +20,7 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: August 19, 2026</p>
+  <p class="updated">Last updated: September 4, 2026</p>
 
   <p>This Privacy Policy explains how MyMacrosFast ("MyMacrosFast," "we," "us,"
   or "our") collects, uses, and shares information when you use the
@@ -51,6 +51,11 @@
     <li><strong>Logged entries.</strong> The meals you log, including
     estimated macros (protein, fat, carbs, calories), food names, portion
     weights, and timestamps.</li>
+    <li><strong>Barcode scans and food searches.</strong> When you scan a
+    product barcode or search the food database, the barcode number or
+    your search term is used to look up that product and its nutrition
+    information from external food-data providers (see "How We Share
+    Information" below).</li>
     <li><strong>Technical/diagnostic data.</strong> We may use error and
     crash-reporting tools to help us identify and fix bugs. These tools
     collect technical details about the crash or error (such as device type
@@ -65,6 +70,8 @@
   <ul>
     <li>Analyze meal photos/descriptions and estimate their macronutrient and
     calorie content</li>
+    <li>Look up product and nutrition information for barcodes you scan and
+    foods you search for</li>
     <li>Store your logged meals so you can review your history</li>
     <li>Sync your data across devices when you're signed in</li>
     <li>Maintain, secure, and improve the App</li>
@@ -83,6 +90,17 @@
     Supabase hosts our database, file storage, and authentication systems,
     and stores your account data, logged entries, and meal photos on our
     behalf.</li>
+    <li><strong>Food-data providers (Open Food Facts and USDA FoodData
+    Central):</strong> to identify a scanned or searched food and its
+    nutrition, we query public food databases. When you scan a barcode,
+    your device contacts <strong>Open Food Facts</strong> directly, so that
+    provider may receive the barcode number and standard network
+    information (such as your IP address and a general app identifier).
+    Food searches — and barcodes not found in Open Food Facts — are sent
+    through our backend to <strong>USDA FoodData Central</strong>, which
+    receives the search term or barcode but not your device's IP address.
+    We do not send your account information, meal history, or any personal
+    identifiers to these providers.</li>
     <li><strong>Google / Apple:</strong> if you sign in with Google or Apple,
     those providers share basic identity information with us as part of the
     sign-in process, subject to their own privacy policies.</li>
