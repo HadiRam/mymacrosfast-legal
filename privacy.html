@@ -20,15 +20,15 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: September 14, 2026</p>
+  <p class="updated">Last updated: September 19, 2026</p>
 
   <p>This Privacy Policy explains how MyMacrosFast ("MyMacrosFast," "we," "us,"
   or "our") collects, uses, and shares information when you use the
   MyMacrosFast mobile application (the "App"). MyMacrosFast is operated by
   Hadi Ramlaoui, an individual based in California, USA.</p>
 
-  <p>By using the App, you agree to the collection and use of information as
-  described in this policy.</p>
+  <p>This policy describes our data practices. It does not replace any
+  separate permission required before collecting or sharing your information.</p>
 
   <h2>1. Information We Collect</h2>
   <p><strong>Information you provide directly</strong></p>
@@ -37,6 +37,10 @@
     you may take or upload a photo of your food, or type a text description
     of it. We use this to estimate the food items, portion sizes, and
     macronutrient/calorie content of your meal.</li>
+    <li><strong>Maccy conversations.</strong> We process messages you send,
+    recent conversation context, and relevant draft or logged meal details
+    to respond to your requests. Avoid including personal details that are
+    not needed for your request.</li>
     <li><strong>Account information.</strong> If you choose to sign in with
     Google or Apple, we receive basic identity information from that
     provider (such as your name and email address, as permitted by your
@@ -45,8 +49,10 @@
     to us, solely so that we can revoke your Sign in with Apple authorization
     with Apple if you later delete your account (Apple requires this). You
     can also use the App without signing in — in that case, your data is
-    tied to an anonymous, device-local session rather than a personal
-    identity.</li>
+    tied to a randomly assigned anonymous account in Supabase. Session
+    credentials are kept on your device, but logged meals, uploaded photos,
+    and saved goals are stored on our servers, not only on your device.
+    Losing access to that session may prevent recovery of anonymous data.</li>
     <li><strong>Body and goal details.</strong> If you use the Daily Goal
     feature, you can enter your sex, age, height, weight, activity level,
     and goal (for example, lose or maintain weight). We use these only to
@@ -70,12 +76,14 @@
     MyMacrosFast Premium, we record whether your subscription is active so
     the App can unlock Premium features. We receive this from Apple through
     RevenueCat (see below); we never see your payment card details.</li>
-    <li><strong>Technical/diagnostic data.</strong> We use Sentry, an error
-    and crash-reporting service, to help us identify and fix bugs. It
-    collects technical details about the crash or error (such as device type,
-    OS version, and the part of the App that failed) but is not used to
-    collect your meal data, and we do not attach your account identity to
-    crash reports.</li>
+    <li><strong>Technical/diagnostic data.</strong> When enabled, Sentry
+    collects error, crash, and sampled performance information, such as
+    device type, OS version, timing, and the part of the App that failed.
+    Reports may include request or error context. We do not deliberately
+    attach your name or email to reports, and we remove authorization
+    headers before sending error events. Our backend and infrastructure
+    providers also process network and operational information to run and
+    secure the service.</li>
   </ul>
 
   <p>We do not currently use behavioral analytics or advertising tracking of
@@ -100,11 +108,15 @@
   <ul>
     <li><strong>Anthropic</strong> (the maker of the Claude AI models): meal
     photos and text descriptions you submit, and the messages you send to
-    the Maccy assistant (together with the logged meal or day Maccy is
-    helping you with), are sent to Anthropic's API solely to identify food
+    the Maccy assistant (together with recent conversation context and
+    relevant draft or logged meal details), are sent to Anthropic's API solely to identify food
     items, estimate macros, and answer your request. Anthropic processes
     this data as our service provider under their commercial API terms and
-    does not use it to train its models.</li>
+    does not use API inputs or outputs to train its models by default.
+    See Anthropic's <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">commercial data-use policy</a>.
+    Anthropic generally deletes API inputs and outputs within 30 days,
+    with exceptions such as safety enforcement and legal obligations, as
+    described in its <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">retention policy</a>.</li>
     <li><strong>Supabase:</strong> our backend infrastructure provider.
     Supabase hosts our database, file storage, and authentication systems,
     and stores your account data, logged entries, and meal photos on our
@@ -132,22 +144,24 @@
     device. We do not see or store your payment card details — Apple handles
     billing directly.</li>
     <li><strong>Sentry:</strong> our crash-reporting provider (see
-    "Technical/diagnostic data" above). Crash reports contain technical
-    details about the error, not your meal data or account identity.</li>
+    "Technical/diagnostic data" above). It processes error, crash, and performance information, which may
+    include request or error context.</li>
     <li><strong>Legal requirements:</strong> we may disclose information if
     required by law, or to protect the rights, property, or safety of
     MyMacrosFast, our users, or others.</li>
   </ul>
 
   <h2>4. Data Retention &amp; Deletion</h2>
-  <p>Your logged meals and account data are retained for as long as you keep
-  using the App.</p>
+  <p>We retain your saved meals, photos, goals, and account information
+  to provide your account and history until you delete them or request
+  deletion. Stopping use of the App or uninstalling it does not by itself
+  delete data stored on our servers.</p>
   <p><strong>Moving anonymous data to an account.</strong> If you start
   using the App without signing in and later sign in with Google or Apple,
   the App asks whether to bring the meals from your anonymous session over
   to your account. If you choose to, that data (meals, photos, pinned meals,
   and — only if your account has none yet — your goal and body details) is
-  moved to your account; nothing is copied elsewhere. If you choose not to,
+  reassigned to your signed-in account. If you choose not to,
   it stays under the anonymous session and is not linked to your account.</p>
   <p>You can permanently delete your data at any time from the Account
   screen in the App:</p>
@@ -161,8 +175,12 @@
     does the same for your anonymous session's data.</li>
   </ul>
   <p>This deletion is permanent and cannot be undone. Data is removed from
-  our live systems immediately; residual copies in routine backups are
-  purged automatically within a limited period afterwards. Deleting your
+  the live account, meal, and photo systems when deletion completes.
+  Backup copies may remain until the applicable backup retention period
+  expires. Limited operational, security, audit, or transaction records
+  may remain where needed for security, legal obligations, or billing.
+  In-app deletion does not automatically erase records held separately by
+  Apple, RevenueCat, or other providers under their retention policies. Deleting your
   account does <strong>not</strong> cancel an active subscription — Apple
   manages billing, so cancel it in your Apple ID subscription settings
   (the App links you there before deletion).</p>
@@ -184,14 +202,15 @@
 
   <h2>7. Data Security</h2>
   <p>We use reasonable technical and organizational measures to protect your
-  information, including row-level database security so that only you can
-  access your own data. However, no method of transmission or storage is
+  information, including row-level database security to restrict access between users.
+  Authorized backend services and providers also process data as described
+  in this policy. However, no method of transmission or storage is
   100% secure, and we can't guarantee absolute security.</p>
 
   <h2>8. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. If we make material
-  changes, we'll update the "Last updated" date above. Continued use of the
-  App after changes means you accept the updated policy.</p>
+  changes, we'll update the "Last updated" date above. We will provide additional notice or obtain consent where required
+  by applicable law.</p>
 
   <h2>9. Contact Us</h2>
   <p>Questions about this policy, or requests regarding your data, can be
